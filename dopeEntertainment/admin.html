@@ -1,10 +1,364 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dope Admin</title>
+    <title>Dope Entertainment</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="img/dopeLogoSmall.jpeg" rel="shortcut icon" type="image/png">
+    <style>
+        .card {
+            flex-direction: row;
+        }
+        .card img {
+            width: 30%;
+        }
+    </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:black;">
+    <a class="navbar-brand" href="index.html"><img src="img/dopeLogoSmall.jpeg" width="45" alt="" class="d-inline-block align-middle mr-2 ml-5"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto ma ">
+            <li class="nav-item">
+                <a class="nav-link" href="events.html">EVENTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="locations.html">LOCATIONS</a>
+            </li>
+            <!-- PROMOTER & DEV ONLY-->
+            <li class="nav-item level2 level0">
+                <a class="nav-link text-success" href="promoter.html">PROMOTER</a>
+            </li>
+            <!-- ADMIN & DEV ONLY -->
+            <li class="nav-item level0 level 1">
+                <a class="nav-link text-danger " href="admin.html">ADMIN</a>
+            </li>
+            <!-- END ADMIN ONLY -->
+            <!-- DEV ONLY -->
+            <li class="nav-item level0">
+                <a class="nav-link text-primary" href="admin.html">DEVELOPER</a>
+            </li>
+            <!-- END DEV ONLY -->
+        </ul>
+        <div class="navbar-nav ml-auto mt-0">
+            <div class="nav-item dropdown">
+                <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"> Welcome, <span id="userName"></span>Ben Yuter <b class="caret"></b></a>
+                <div class="dropdown-menu rounded">
+                    <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
+                    <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> My Tickets</a></a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main class="container">
+    <h2>Event Sales</h2>
+    <div class="text-center">
+        <nav aria-label="Page navigation ">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link text-secondary" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link">EVENT DATE</a></li>
+                <li class="page-item">
+                    <a class="page-link text-secondary" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+                <div class="dropdown ml-auto">
+                    <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Promoters
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">All</a>
+                        <a class="dropdown-item" href="#">Ben Yuter</a>
+                        <a class="dropdown-item" href="#">Aidan Rosen</a>
+                        <a class="dropdown-item" href="#">Jack Armstrong</a>
+                        <a class="dropdown-item" href="#">Alex Rogers</a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
 
+    </div>
+    Total: <div class="progress mb-3">
+        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+    </div>
+    Group 1: <div class="progress mb-1">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+    </div>
+    Group 2: <div class="progress mb-1">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+    </div>
+    Group 3: <div class="progress mb-1">
+        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75&</div>
+    </div>
+    Group 4: <div class="progress mb-1">
+        <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+    </div>
+    <h2 class="mt-3">Promoters</h2>
+    <table class="table table-secondary table-hover text-center rounded mt-1">
+        <thead>
+        <tr>
+            <th scope="col">Promoter</th>
+            <th scope="col">Email</th>
+            <th scope="col">School</th>
+            <th scope="col">Dope</th>
+            <th scope="col">Dope U</th>
+            <th scope="col">Slacker</th>
+            <th scope="col">Remove</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Ben Yuter</th>
+            <td>yuter.ben@gmail.com</td>
+            <td>Bent</td>
+            <td><input name='dopeEnt' type="checkbox"></td>
+            <td><input name='dopeU' type="checkbox"></td>
+            <td><input name='slackerU' type="checkbox"></td>
+            <td><i class="bi bi-x text-danger"></i></td>
+        </tr>
+        <tr>
+            <th scope="row">Aidan Rosen</th>
+            <td>arosen@gmail.com</td>
+            <td>Babs</td>
+            <td><input name='dopeEnt' type="checkbox"></td>
+            <td><input name='dopeU' type="checkbox"></td>
+            <td><input name='slackerU' type="checkbox"></td>
+            <td><i class="bi bi-x text-danger"></i></td>
+        </tr>
+        <tr>
+            <th scope="row">Jack Armstrong</th>
+            <td>jarm@gmail.com</td>
+            <td>NU</td>
+            <td><input name='dopeEnt' type="checkbox"></td>
+            <td><input name='dopeU' type="checkbox"></td>
+            <td><input name='slackerU' type="checkbox"></td>
+            <td><i class="bi bi-x text-danger"></i></td>
+        </tr>
+        <tr>
+            <th scope="row">Alex Rogers</th>
+            <td>rog@gmail.com</td>
+            <td>NU</td>
+            <td><input name='dopeEnt' type="checkbox"></td>
+            <td><input name='dopeU' type="checkbox"></td>
+            <td><input name='slackerU' type="checkbox"></td>
+            <td><i class="bi bi-x text-danger"></i></td>
+        </tr>
+        <tr>
+            <th scope="row">Leo Susi</th>
+            <td>lsusi@gmail.com</td>
+            <td>Bent</td>
+            <td><input name='dopeEnt' type="checkbox"></td>
+            <td><input name='dopeU' type="checkbox"></td>
+            <td><input name='slackerU' type="checkbox"></td>
+            <td><i class="bi bi-x text-danger"></i></td>
+        </tr>
+        <tr>
+            <th scope="row">Matt g</th>
+            <td>mattg@gmail.com</td>
+            <td>BC</td>
+            <td><input name='dopeEnt' type="checkbox"></td>
+            <td><input name='dopeU' type="checkbox"></td>
+            <td><input name='slackerU' type="checkbox"></td>
+            <td><i class="bi bi-x text-danger"></i></td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addPromoter">
+        Add Promoter
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addPromoter" tabindex="-1" role="dialog" aria-labelledby="addPromoterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Promoter</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="promoterName">Name</label>
+                            <input type="email" class="form-control" id="promoterName" aria-describedby="nameHelp" placeholder="Enter Promoter Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="promoterEmail">Email address</label>
+                            <input type="email" class="form-control" id="promoterEmail" aria-describedby="emailHelp" placeholder="Enter Promoter Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="promoterName">School</label>
+                            <input type="email" class="form-control" id="promoterSchool" aria-describedby="schoolHelp" placeholder="Enter Promoter School">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="dopeCheck">DOPE</label>
+                            <input type="checkbox" class="form-check" id="dopeCheck">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="dopeUCheck">DOPE U</label>
+                            <input type="checkbox" class="form-check" id="dopeUCheck">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="slackerUCheck">Slacker U</label>
+                            <input type="checkbox" class="form-check" id="slackerUCheck">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="mt-3">Ticket Comp</h2>
+    <form>
+        <div class="form-group">
+            <label for="emailComp">Email address</label>
+            <input type="email" class="form-control" id="emailComp" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Ticket Quantity</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-secondary">Create Ticket(s)</button>
+    </form>
+    <h2 class="mt-3 text-danger">Disable Ticket</h2>
+    <form class="text-danger">
+        <div class="form-group">
+            <label for="emailComp">Email address</label>
+            <input type="email" class="form-control" id="emailComp" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Ticket Quantity</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-danger">Disable Ticket(s)</button>
+    </form>
+    <h2 class="mt-3">Table Sale</h2>
+    <form>
+        <div class="form-group">
+            <label for="emailComp">Email address</label>
+            <input type="email" class="form-control" id="emailComp" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Table Number</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>1</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-secondary">Create Table</button>
+    </form>
+    <h2 class="mt-3 text-danger">Delete Table</h2>
+    <form class="text-danger">
+        <div class="form-group">
+            <label for="emailComp">Email address</label>
+            <input type="email" class="form-control" id="emailComp" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Table Number</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>1</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-danger">Remove Table</button>
+    </form>
+</main>
+<div class="push"></div>
+<footer class="mt-5 border-top border-5 border-white text-center">
+    <div>&copy; 2022 DOPE ENTERTAINMENT</div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
