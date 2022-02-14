@@ -1,0 +1,24 @@
+#carouselIMG1{
+    height:600px;
+    object-fit:cover;
+    object-position: 50% 60%;
+}
+#carouselIMG2{
+    height:600px;
+    object-fit:cover;
+    object-position: 50% 15%;
+}
+#carouselIMG3{
+    height:600px;
+    object-fit:cover;
+    object-position: 50% 25%;
+}
+main{
+    margin-top:25px;
+}
+#indexEvents, #indexAbout, #indexLocations{
+    width:200px;
+    padding:40px 0;
+    font-size:30px;
+}
+

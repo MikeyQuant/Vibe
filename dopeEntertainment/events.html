@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dope Entertainment</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/events.css" rel="stylesheet">
+    <link href="img/dopeLogoSmall.jpeg" rel="shortcut icon" type="image/png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:black;">
+        <a class="navbar-brand" href="index.html"><img src="img/dopeLogoSmall.jpeg" width="45" alt="DOPE" class="d-inline-block align-middle mr-2 ml-5"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto ma ">
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">LOCATIONS</a>
+                </li>
+                <!-- PROMOTER & DEV ONLY-->
+                <li class="nav-item level2 level0">
+                    <a class="nav-link text-success" href="promoter.html">PROMOTER</a>
+                </li>
+                <!-- ADMIN & DEV ONLY -->
+                <li class="nav-item level0 level 1">
+                    <a class="nav-link text-danger " href="admin.html">ADMIN</a>
+                </li>
+                <!-- END ADMIN ONLY -->
+                <!-- DEV ONLY -->
+                <li class="nav-item level0">
+                    <a class="nav-link text-primary" href="admin.html">DEVELOPER</a>
+                </li>
+                <!-- END DEV ONLY -->
+            </ul>
+            <div class="navbar-nav ml-auto mt-0">
+                <div class="nav-item dropdown">
+                    <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"> Welcome, <span id="userName"></span>Ben Yuter <b class="caret"></b></a>
+                    <div class="dropdown-menu rounded">
+                        <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
+                        <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> My Tickets</a></a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<main class="container">
+    <h1 class="">Events</h1>
+    <div class="text-center">
+        <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="optionAll" autocomplete="off" checked> All
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option21" autocomplete="off"> 21+
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option18" autocomplete="off"> 18+
+            </label>
+        </div>
+    </div>
+    <!-- EVENT TEMPLATE -->
+    <div class="card" >
+        <img class="card-img-top" src="img/ValentinesSquare.jpeg" alt="ICON SATURDAY">
+        <div class="card-body">
+            <h5 class="card-title">Valentines Stop Light Party</h5>
+            <p class="card-text">
+            <div id="Eventdate" class="text-danger">
+                Sat, Feb 12, 10:30 PM
+            </div>
+            <div id="EventLoc" class="text-secondary">
+                Icon Nightclub - Boston, MA
+            </div>
+            <div id="EventType" class="text-warning">
+                Dope University
+            </div>
+            <div id="EventTic">
+                Tickets <span id="Range">$20-30</span>
+            </div>
+            </p>
+            <!-- TICKET MODAL -->
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#clickTickets">Click for Tickets</button>
+            <div class="modal fade" id="clickTickets" tabindex="-1" role="dialog" aria-labelledby="clickTicketsTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="row">
+                                <div class="col-12 col-lg-8">
+                                    <img class="eventDescIMG" src="img/valentines.jpeg" alt="Valentines"/>
+                                </div>
+                                <div class="col-12 col-lg-4 container">
+                                    <div class="row">
+                                        <div class="col-2 col-lg-12 text-left mt-3">
+                                            FEB<br/> 12
+                                        </div>
+                                        <div class="col-10 col-lg-12 ml-auto mt-3">
+                                            VALENTINES STOP LIGHT PARTY @ICON
+                                        </div>
+                                        <div class="col-10 col-lg-12 ml-auto">
+                                            $20-$30
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body container">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <button type="button" class="btn btn-secondary col-4" data-dismiss="modal">Close</button>
+                                <div class="col-2"></div>
+                                <a href="tickets.html" type="button" class="btn btn-success col-4">Tickets</a>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer container">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h5>SPICE UP YOUR VALENTINES DAY WEEKEND! WEAR GREEN FOR A GOOD TIME ;)</h5>
+                                    <br/>
+                                    <h4>About this Event</h4>
+                                    <p>Dope University aims to provide the best party destinations for university and college students. Follow us on Instagram <b>@dopeuniversityboston</b> for sneak peeks and event updates.</p>
+                                    <br/>
+                                    <p>21+ with valid id. Must show <b>proof of vaccination</b> at entry. University checks and digital forms are acceptable.</p>
+                                    <br/>
+                                    <p>Themed Event: <b>Stop Light Party-</b> Wear green to indicate that you are available and ready to mingle. In a complicated relationship and ready to risk it all? Then wear the color yellow. Coming through to have a good time with your significant other? No worries, wear red so people know you're taken.</p>
+                                    <br/>
+                                    <p>No busses or limos without prior approval</p>
+                                    <br/>
+                                    <p>Management has the right to refuse entry if a customer appears to be intoxicated.</p>
+                                    <br/>
+                                        <hr/>
+                                    <br/>
+                                    <br/>
+                                    <p>ICON NIGHTCLUB</p>
+                                    <br/>
+                                    <p>100 Warrenton St, BOSTON, MA</p>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Date and Time</h6>
+                                    <p>
+                                        Sat, Feb 12, 2022, 10:30 PM -<br/>
+                                        Sun, Feb 13, 2022, 2:00 AM EST
+                                    </p>
+                                    <br/>
+                                    <br/>
+                                    <h6>Location</h6>
+                                    <p>
+                                        Icon Nightclub<br/>
+                                        100 Warrenton Street<br/>
+                                        Boston, MA 02116
+                                    </p>
+                                    <br/>
+                                    <br/>
+                                    <h6>Refund policy</h6>
+                                    <p>No Refunds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END TICKET MODAL -->
+            <!-- EDIT MODAL -->
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#adminEdit">Edit</button>
+            <div class="modal fade" id="adminEdit" tabindex="-1" role="dialog" aria-labelledby="adminEditTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="adminEditLabel">Edit Event</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Event Title: <input type="text" value="Valentines Stop Light Party" id="editEventTitle"><br/>
+
+                            Event Date: <input type="text" value="Sat, Feb 12" id="editEventDate"><br/>
+                            Event Time: <input type="text" value="10:30 PM" id="editEventTime"><br/>
+
+                            Event Location: <input type="text" value="Icon Nightclub" id="editEventLocation"><br/>
+                            Event City: <input type="text" value="Boston, MA" id="editEventCity"><br/>
+
+                            Event Low Ticket: $<input type="text" value="20" id="editEventLowTicket"><br/>
+                            Event High Ticket: $<input type="text" value="30" id="editEventHighTicket"><br/>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END EDIT MODAL -->
+            <!-- PROMOTER MODAL -->
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myPromoterLink">My Link</button>
+            <div class="modal fade" id="myPromoterLink" tabindex="-1" role="dialog" aria-labelledby="myPromoterLinkTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Promoter Link</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Personal Link: <input type="text" value="www.gofuckyourself.com/byuter" id="myLink">
+                            <button type="button" class="btn btn-success" onclick="myLinks()">Copy <i class="bi bi-clipboard"></i></button>
+                            <script>
+                                function myLinks() {
+                                    /* Get the text field */
+                                    var copyText = document.getElementById("myLink");
+
+                                    /* Select the text field */
+                                    copyText.select();
+                                    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                                    /* Copy the text inside the text field */
+                                    navigator.clipboard.writeText(copyText.value);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PROMOTER MODAL -->
+        </div>
+    </div>
+    <!-- END EVENT TEMPLATE -->
+</main>
+<div class="push"></div>
+<footer class="mt-5 border-top border-5 border-white text-center">
+    <div>&copy; 2022 DOPE ENTERTAINMENT</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
