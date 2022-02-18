@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dope Entertainment</title>
+    <title>Promoter</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+    <link href="css/promoter.css" rel="stylesheet">
     <link href="css/nav.css" rel="stylesheet">
     <link href="img/dopeLogoSmall.jpeg" rel="shortcut icon" type="image/png">
-
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:black;">
@@ -58,7 +58,81 @@
         </div>
     </div>
 </nav>
+<main class="container">
+    <h1>My Links</h1>
+    <div class="mb-5">
+        <div class="row">
+            <div class="col-4 col-lg-2">Valentines Stop Light: </div>
+            <div class="col-5 col-lg-8">
+                <input type="text" class="form-control" value="www.gofuckyourself.com/byuter" id="myLink1"> <!-- CUSTOM ID FOR EACH EVENT -->
+            </div>
+            <div class="col-3 col-lg-2">
+                <button type="button" class="btn btn-success" onclick="myLinks1()">Copy <i class="bi bi-clipboard"></i></button>
+            </div>
+        </div>
+        <script>
+            function myLinks1() {
+                /* Get the text field */
+                var copyText = document.getElementById("myLink1");
 
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                /* Copy the text inside the text field */
+                navigator.clipboard.writeText(copyText.value);
+            }
+        </script>
+    </div>
+    <div class="mb-5">
+        <div class="row">
+            <div class="col-4 col-lg-2">Jungle Boogie: </div>
+            <div class="col-5 col-lg-8">
+                <input type="text" class="form-control" value="www.gofuckyourself.com/byuter" id="myLink2"> <!-- CUSTOM ID FOR EACH EVENT -->
+            </div>
+            <div class="col-3 col-lg-2">
+                <button type="button" class="btn btn-success" onclick="myLinks2()">Copy <i class="bi bi-clipboard"></i></button>
+            </div>
+        </div>
+        <script>
+            function myLinks2() {
+                /* Get the text field */
+                var copyText = document.getElementById("myLink2");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                /* Copy the text inside the text field */
+                navigator.clipboard.writeText(copyText.value);
+            }
+        </script>
+    </div>
+    <div class="mb-5">
+        <div class="row">
+            <div class="col-4 col-lg-2">College Takeover: </div>
+            <div class="col-5 col-lg-8">
+                <input type="text" class="form-control" value="wbyuter" id="myLink3"> <!-- CUSTOM ID FOR EACH EVENT -->
+            </div>
+            <div class="col-3 col-lg-2">
+                <button type="button" class="btn btn-success" onclick="myLinks3()">Copy <i class="bi bi-clipboard"></i></button>
+            </div>
+        </div>
+        <script>
+            function myLinks3() {
+                /* Get the text field */
+                var copyText = document.getElementById("myLink3");
+
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                /* Copy the text inside the text field */
+                navigator.clipboard.writeText(copyText.value);
+            }
+        </script>
+    </div>
+</main>
 <div class="push"></div>
 <footer class="fixed-bottom mt-5 border-top border-5 border-white text-center">
     <div>&copy; 2022 DOPE ENTERTAINMENT</div>

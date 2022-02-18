@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dope Entertainment</title>
+    <title>My Profile</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+    <link href="css/proflie.css" rel="stylesheet">
     <link href="css/nav.css" rel="stylesheet">
     <link href="img/dopeLogoSmall.jpeg" rel="shortcut icon" type="image/png">
 
@@ -58,7 +59,41 @@
         </div>
     </div>
 </nav>
-
+<main class="container">
+    <h1>Profile</h1>
+    <form class="g-3 needs-validation col-12 col-lg-6">
+        <div class="form-group">
+            <label class="form-label" for="summaryName">Name</label>
+            <input type="name" class="form-control" id="profileName" value="Ben Yuter" required readonly>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="summaryEmail">Email address</label>
+            <input name="email" type="email" class="form-control" id="profileEmail" value="yuter.ben@gmail.com" required readonly>
+            <div class="invalid-feedback">
+                Please Enter an Email
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="summaryEmailConf">Confirm Email address</label>
+            <input name="emailConfirm" type="email" class="form-control" id="profileEmailConf" value="yuter.ben@gmail.com" onblur="confirmEmail()" required readonly>
+            <div class="invalid-feedback">
+                Please Enter an Email
+            </div>
+            <script type="text/javascript">
+                function confirmEmail() {
+                    var email = document.getElementById("summaryEmail").value
+                    var confemail = document.getElementById("summaryEmailConf").value
+                    if(email !== confemail) {
+                        alert('Email Not Matching!');
+                    }
+                }
+            </script>
+        </div>
+        <div class="text-center">
+            <button href="http://127.0.0.1:5000/create-checkout-session/" class="btn btn-primary">Edit</button>
+        </div>
+    </form>
+</main>
 <div class="push"></div>
 <footer class="fixed-bottom mt-5 border-top border-5 border-white text-center">
     <div>&copy; 2022 DOPE ENTERTAINMENT</div>

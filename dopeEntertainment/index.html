@@ -30,9 +30,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">ABOUT</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="locations.html">LOCATIONS</a>
-                    </li>
                     <!-- PROMOTER & DEV ONLY-->
                     <li class="nav-item level2 level0">
                         <a class="nav-link text-success" href="promoter.html">PROMOTER</a>
@@ -44,7 +41,7 @@
                     <!-- END ADMIN ONLY -->
                     <!-- DEV ONLY -->
                     <li class="nav-item level0">
-                        <a class="nav-link text-primary" href="admin.html">DEVELOPER</a>
+                        <a class="nav-link text-primary" href="dev.html">DEVELOPER</a>
                     </li>
                     <!-- END DEV ONLY -->
                 </ul>
@@ -52,10 +49,10 @@
                     <div class="nav-item dropdown">
                         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"> Welcome, <span id="userName"></span>Ben Yuter <b class="caret"></b></a>
                         <div class="dropdown-menu rounded">
-                            <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
-                            <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> My Tickets</a></a>
+                            <a href="profile.html" class="dropdown-item"><i class="bi bi-person"></i> Profile</a></a>
+                            <a href="myTickets.html" class="dropdown-item"><i class="bi bi-ticket-detailed"></i> My Tickets</a></a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></a>
+                            <a href="index.html" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></a>
                         </div>
                     </div>
                 </div>
@@ -67,6 +64,7 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
+
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img id="carouselIMG1" class="d-block w-100" src="img/iconTestPhoto.jpeg" alt="Icon">
@@ -88,20 +86,20 @@
         </a>
     </div>
     <main class="container">
+        <h1 class=" text-center">
+            DOPE ENTERTAINMENT
+        </h1>
         <div class="row text-center">
-            <div class="col-12 col-lg-4">
-                <a id="indexEvents" href="events.html" class="btn btn-dark border border-5 border-secondary ml-5 mr-5 mt-5">EVENTS</a>
+            <div class="col-12 col-lg-6">
+                <a id="indexEvents" href="events.html" class="btn btn-dark border border-5 border-secondary m-5">EVENTS</a>
             </div>
-            <div class="col-12 col-lg-4">
-                <a id="indexAbout" href="about.html" class="btn btn-dark border border-5 border-secondary ml-5 mr-5 mt-5">ABOUT</a>
-            </div>
-            <div class="col-12 col-lg-4">
-                <a id="indexLocations" href="locations.html" class="btn btn-dark border border-5 border-secondary ml-5 mr-5 mt-5">LOCATIONS</a>
+            <div class="col-12 col-lg-6">
+                <a id="indexAbout" href="about.html" class="btn btn-dark border border-5 border-secondary m-5">ABOUT</a>
             </div>
         </div>
     </main>
     <div class="push"></div>
-    <footer class="mt-5 border-top border-5 border-white text-center">
+    <footer class="fixed-bottom mt-5 border-top border-5 border-white text-center">
         <div>&copy; 2022 DOPE ENTERTAINMENT</div>
     </footer>
 

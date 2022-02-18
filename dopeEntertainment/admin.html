@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dope Entertainment</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -15,14 +15,6 @@
     <link href="css/admin.css" rel="stylesheet">
     <link href="css/nav.css" rel="stylesheet">
     <link href="img/dopeLogoSmall.jpeg" rel="shortcut icon" type="image/png">
-    <style>
-        .card {
-            flex-direction: row;
-        }
-        .card img {
-            width: 30%;
-        }
-    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:black;">
@@ -38,9 +30,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="about.html">ABOUT</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="locations.html">LOCATIONS</a>
-            </li>
             <!-- PROMOTER & DEV ONLY-->
             <li class="nav-item level2 level0">
                 <a class="nav-link text-success" href="promoter.html">PROMOTER</a>
@@ -52,7 +41,7 @@
             <!-- END ADMIN ONLY -->
             <!-- DEV ONLY -->
             <li class="nav-item level0">
-                <a class="nav-link text-primary" href="admin.html">DEVELOPER</a>
+                <a class="nav-link text-primary" href="dev.html">DEVELOPER</a>
             </li>
             <!-- END DEV ONLY -->
         </ul>
@@ -60,10 +49,10 @@
             <div class="nav-item dropdown">
                 <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"> Welcome, <span id="userName"></span>Ben Yuter <b class="caret"></b></a>
                 <div class="dropdown-menu rounded">
-                    <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
-                    <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> My Tickets</a></a>
+                    <a href="profile.html" class="dropdown-item"><i class="bi bi-person"></i> Profile</a></a>
+                    <a href="myTickets.html" class="dropdown-item"><i class="bi bi-ticket-detailed"></i> My Tickets</a></a>
                     <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></a>
+                    <a href="index.html" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></a>
                 </div>
             </div>
         </div>
@@ -119,7 +108,7 @@
         <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
     </div>
     <h2 class="mt-3">Promoters</h2>
-    <table class="table table-secondary table-hover text-center rounded mt-1">
+    <table class="table table-responsive table-secondary table-hover text-center rounded mt-1">
         <thead>
         <tr>
             <th scope="col">Promoter</th>
@@ -245,8 +234,8 @@
             <input type="email" class="form-control" id="emailComp" placeholder="name@example.com">
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Ticket Quantity</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="selectTicketComp">Ticket Quantity</label>
+            <select class="form-control" id="selectTicketComp">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -264,12 +253,12 @@
     <h2 class="mt-3 text-danger">Disable Ticket</h2>
     <form class="text-danger">
         <div class="form-group">
-            <label for="emailComp">Email address</label>
-            <input type="email" class="form-control" id="emailComp" placeholder="name@example.com">
+            <label for="emailDisableTicket">Email address</label>
+            <input type="email" class="form-control" id="emailDisableTicket" placeholder="name@example.com">
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Ticket Quantity</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="quantityDisableTicket">Ticket Quantity</label>
+            <select class="form-control" id="quantityDisableTicket">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -287,12 +276,12 @@
     <h2 class="mt-3">Table Sale</h2>
     <form>
         <div class="form-group">
-            <label for="emailComp">Email address</label>
-            <input type="email" class="form-control" id="emailComp" placeholder="name@example.com">
+            <label for="emailTable">Email address</label>
+            <input type="email" class="form-control" id="emailTable" placeholder="name@example.com">
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Table Number</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="selectTable">Table Number</label>
+            <select class="form-control" id="selectTable">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -320,12 +309,12 @@
     <h2 class="mt-3 text-danger">Delete Table</h2>
     <form class="text-danger">
         <div class="form-group">
-            <label for="emailComp">Email address</label>
-            <input type="email" class="form-control" id="emailComp" placeholder="name@example.com">
+            <label for="emailDeleteTable">Email address</label>
+            <input type="email" class="form-control" id="emailDeleteTable" placeholder="name@example.com">
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Table Number</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="selectDeleteTable">Table Number</label>
+            <select class="form-control" id="selectDeleteTable">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -352,7 +341,7 @@
     </form>
 </main>
 <div class="push"></div>
-<footer class="mt-5 border-top border-5 border-white text-center">
+<footer class="fixed-bottom mt-5 border-top border-5 border-white text-center">
     <div>&copy; 2022 DOPE ENTERTAINMENT</div>
 </footer>
 
